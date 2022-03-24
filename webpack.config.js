@@ -33,6 +33,14 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.css$/,
+        use: [
+          'style-loader',
+          'css-loader',
+          'postcss-loader'
+        ]
+      },
+      {
         test: /\.less$/,
         use: [
           'style-loader',
@@ -59,6 +67,25 @@ module.exports = {
         use: [
           'vue-loader'
         ]
+      },
+      {
+        test: /\.(png|jpe?g|gif)$/,
+        type: 'asset',
+        generator: {
+          filename: 'img/[name].[hash:6][ext]'
+        },
+        parser: {
+          dataUrlCondition: {
+            maxSize: 100 * 1024
+          }
+        }
+      },
+      {
+        test: /\.(woff|eot|ttf|woff2)$/i,
+        type: 'asset/resource',
+        generator: {
+          filename: 'font/[name].[hash:6][ext]'
+        }
       }
     ]
   },
@@ -66,7 +93,7 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: 'dengnwj',
+      title: 'dengwj',
       template: './public/index.html'
     }),
     new CopyWebpackPlugin({
