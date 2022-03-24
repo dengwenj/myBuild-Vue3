@@ -4,7 +4,7 @@ import './App.css'
 </script>
 
 <template>
-    <div class='app'>
+  <div class='app'>
     <img :src="logo" alt="logo" />
     <div class='wrapper'>
       Welcome to the vue app created by the CLI developed by Deng Wenjie
