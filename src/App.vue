@@ -39,7 +39,7 @@ import './App.css'
         知乎
       </a> 上找到我
     </div>
-    <div class="wrapper">这是我的简介: <a href="http://139.196.212.216/" target="_blank">简介</a></div>
+    <div class="wrapper">这是我的简介: <a href="http://dengwj.vip/" target="_blank">简介</a></div>
   </div>
 </template>
 
